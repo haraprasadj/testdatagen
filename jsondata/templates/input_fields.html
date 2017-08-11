@@ -1,0 +1,30 @@
+<form action="/json/generate" method="post">
+    {% csrf_token %}
+    {{ formset.management_form }}
+    <input type="hidden" value="{{ size }}" name="data_size"/>
+    <table>
+        <tr>
+            <th>Expected Data Size:</th>
+            <td>{{ size }}</td>
+        </tr>
+    </table>
+    <br>
+    <table>
+        <tr>
+            <th>FIELD SPECIFICATION:</th>
+        </tr>
+    </table>
+    <table>
+        {% for form in formset %}
+        <tr>
+            <td>Field Name:</td>
+            <td>{{ form.field_name }}</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>Data Type:</td>
+            <td>{{ form.data_type }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    <input type="submit" value="Submit"/>
+</form>
