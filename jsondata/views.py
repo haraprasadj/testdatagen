@@ -7,8 +7,7 @@ from jsondata.repository.jsonrepo import JsonRepository
 
 
 def index(request):
-    if not request.session.exists(request.session.session_key):
-        request.session.create()
+    request.session.create()
     if request.method == 'POST':
         data_size = request.POST.get("data_length")
         FieldSpecFormSet = formset_factory(FieldSpecForm, extra=int(request.POST.get("field_length")))
