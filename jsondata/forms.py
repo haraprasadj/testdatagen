@@ -4,7 +4,7 @@ from jsondata.config.datatype import DataType
 
 
 class DataSpecForm(forms.Form):
-    data_length = forms.IntegerField(label="Number of records to generate", max_value=100)
+    data_length = forms.IntegerField(label="Number of records to generate", max_value=50)
     field_length = forms.IntegerField(label="Number of fields per record", max_value=5)
 
 
