@@ -4,9 +4,10 @@
 
 #### Usage
 i) Clone the repo  
-ii) Install requirements: pip install -r requirements.txt  
-iii) Run the django server: gunicorn testdatagen.wsgi --log-file -  
-iv) Navigate to (http://localhost:8000/json) and follow the steps
+ii) Change to testdatagen directory (top-level one containing manage.py and README.md)  
+iii) Install requirements: pip install -r requirements.txt  (Not required if you already have Django, Faker and Gunicorn)
+iv) Run the django server: gunicorn testdatagen.wsgi --log-file -  
+v) Navigate to (http://localhost:8000/json) and follow the steps
 
 #### Note: Support available only for JSON format now
 
