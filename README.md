@@ -4,8 +4,8 @@
 
 #### How to use it
 i) Clone the repo  
-ii) Install requirements - pip install -r requirements.txt  
-iii) Run the django server - gunicorn testdatagen.wsgi --log-file -  
+ii) Install requirements: pip install -r requirements.txt  
+iii) Run the django server: gunicorn testdatagen.wsgi --log-file -  
 iv) Navigate to (http://localhost:8000/json) and follow the steps
 
 #### Support available only for JSON format now
