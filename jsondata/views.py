@@ -1,6 +1,7 @@
 from django.shortcuts import render
-from django.http import FileResponse
+from django.http import FileResponse, HttpResponse
 from django.forms import formset_factory
+import os
 
 from jsondata.forms import DataSpecForm, FieldSpecForm
 from jsondata.repository.jsonrepo import JsonRepository
@@ -30,4 +31,6 @@ def generate(request):
             dataspec['fields'].append({'name': name, 'type': type})
         repo = JsonRepository(dataspec)
         filepath = repo.get_json_data(request.session.session_key)
-        return FileResponse(open(filepath, 'rb'))
+        response = FileResponse(open(filepath, 'rb'), content_type='application/force-download')
+        os.remove(filepath)
+        return response
