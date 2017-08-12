@@ -5,8 +5,8 @@
 #### How to use it
 i) Clone the repo  
 ii) Install requirements - pip install -r requirements.txt  
-ii) Run the django server - python manage.py runserver  
-iii) Navigate to to the web page and follow the steps
+iii) Run the django server - python manage.py runserver  
+iv) Navigate to to the web page and follow the steps
 
 #### Support available only for JSON format now
 
