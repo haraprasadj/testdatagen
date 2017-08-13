@@ -16,12 +16,15 @@ Including another URLconf
 from django.conf.urls import url
 from django.contrib import admin
 
-# JSON DATA #
-from jsondata import views as jsondataviews
+from jsondata import views as json_views
+from csvdata import views as csv_views
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     # JSON DATA #
-    url(r'^json/$', jsondataviews.index),
-    url(r'^json/generate$', jsondataviews.generate),
+    url(r'^json/$', json_views.index),
+    url(r'^json/generate$', json_views.generate),
+    # CSV DATA #
+    url(r'^csv/$', csv_views.index),
+    url(r'^csv/generate$', csv_views.generate),
 ]

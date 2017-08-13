@@ -4,7 +4,7 @@ from django.forms import formset_factory
 import os
 
 from commons.forms import DataSpecForm, FieldSpecForm
-from jsondata.repository.jsonrepo import JsonRepository
+from csvdata.repository.csvrepo import CsvRepository
 
 
 def index(request):
@@ -13,9 +13,9 @@ def index(request):
         data_size = request.POST.get("data_length")
         FieldSpecFormSet = formset_factory(FieldSpecForm, extra=int(request.POST.get("field_length")))
         formset = FieldSpecFormSet()
-        return render(request, 'input_fields.html', {'datatype': 'json', 'size': data_size, 'formset': formset})
+        return render(request, 'input_fields.html', {'datatype': 'csv', 'size': data_size, 'formset': formset})
     form = DataSpecForm()
-    return render(request, 'input.html', {'datatype': 'json', 'form': form})
+    return render(request, 'input.html', {'datatype': 'csv', 'form': form})
 
 
 def generate(request):
@@ -29,8 +29,8 @@ def generate(request):
             name = request.POST.get("form-%s-field_name" % str(i))
             type = request.POST.get("form-%s-data_type" % str(i))
             dataspec['fields'].append({'name': name, 'type': type})
-        repo = JsonRepository(dataspec)
-        filepath = repo.get_json_data(request.session.session_key)
+        repo = CsvRepository(dataspec)
+        filepath = repo.get_csv_data(request.session.session_key)
         response = FileResponse(open(filepath, 'rb'), content_type='application/force-download')
         #os.remove(filepath)
         return response
