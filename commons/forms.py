@@ -1,6 +1,6 @@
 from django import forms
 
-from jsondata.config.datatype import DataType
+from commons.config.datatype import DataType
 
 
 class DataSpecForm(forms.Form):

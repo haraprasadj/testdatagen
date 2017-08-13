@@ -9,7 +9,7 @@ class DataType(Enum):
     COMPANY = 'company'
     DATE = 'date'
     DATE_TIME = 'date_time'
-    RANDOM_TEXT = 'sentences'
+    RANDOM_TEXT = 'bs'
 
 if __name__=='__main__':
     for name, member in DataType.__members__.items():
