@@ -15,4 +15,4 @@ v) Navigate to (http://localhost:8000/json) and follow the steps
 
 #### Demo
 Try it out [here](https://testdatagen.herokuapp.com/json/)
-The demo app supporting 100 rows and 5 fields at the most
+The demo app supports 100 rows and 5 fields at the most
