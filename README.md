@@ -14,5 +14,5 @@ v) Navigate to (http://localhost:8000/json) and follow the steps
 - CSV
 
 #### Demo
-Try it out [here](https://testdatagen.herokuapp.com/json/)
-The demo app supports 100 rows and 5 fields at the most
+Try it out [here](https://testdatagen.herokuapp.com/json/) for JSON and [here](https://testdatagen.herokuapp.com/csv/) for CSV
+The demo app supports generation of 50 rows and 5 fields at the most
