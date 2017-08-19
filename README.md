@@ -1,6 +1,6 @@
 # testdatagen
 
-### Django web app to generate test data
+### Django web app to generate realistic test data
 
 #### Usage
 i) Clone the repo  
