@@ -5,9 +5,9 @@ from commons.config.datatype import DataType
 
 class DataSpecForm(forms.Form):
     data_length = forms.IntegerField(label="Number of records to generate", max_value=50,
-                                     widget=forms.TextInput(attrs={'class': 'form-control'}))
+                                     widget=forms.NumberInput(attrs={'class': 'form-control'}))
     field_length = forms.IntegerField(label="Number of fields per record", max_value=5,
-                                      widget=forms.TextInput(attrs={'class': 'form-control'}))
+                                      widget=forms.NumberInput(attrs={'class': 'form-control'}))
 
 
 class FieldSpecForm(forms.Form):
