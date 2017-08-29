@@ -1,11 +1,12 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<form action="/{{ datatype }}/" method="post">
-    {% csrf_token %}
-    <table>
-        {{ form.as_table }}
-    </table>
-    <input type="submit" value="Submit"/>
+<form action="/{{ datatype }}/" method="post">{% csrf_token %}
+    <div class="form-group">
+        <table>
+            {{ form.as_table }}
+        </table>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </div>
 </form>
 {% endblock %}
