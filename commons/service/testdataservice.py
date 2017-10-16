@@ -6,7 +6,7 @@ fake = Factory.create()
 
 
 def get_test_data(datatype):
-    return fake.__dict__.get(DataType[datatype].value)()
+    return str(fake.__dict__.get(DataType[datatype].value)())
 
 
 if __name__ == '__main__':
