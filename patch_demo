@@ -1,0 +1,16 @@
+diff --git a/commons/forms.py b/commons/forms.py
+index 332c83d..9000021 100644
+--- a/commons/forms.py
++++ b/commons/forms.py
+@@ -4,9 +4,9 @@ from commons.config.datatype import DataType
+ 
+ 
+ class DataSpecForm(forms.Form):
+-    data_length = forms.IntegerField(label="Number of records to generate",
++    data_length = forms.IntegerField(label="Number of records to generate", max_value=10,
+                                      widget=forms.NumberInput(attrs={'class': 'form-control'}))
+-    field_length = forms.IntegerField(label="Number of fields per record",
++    field_length = forms.IntegerField(label="Number of fields per record", max_value=5,
+                                       widget=forms.NumberInput(attrs={'class': 'form-control'}))
+ 
+ 
